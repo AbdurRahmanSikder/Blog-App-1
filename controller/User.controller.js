@@ -33,7 +33,8 @@ export const signup = async (req,res) => {
     const user = new User({
         name,
         email,
-        password : hashedpassword
+        password : hashedpassword,
+        blogs: []
     });
     try{
         await user.save();
